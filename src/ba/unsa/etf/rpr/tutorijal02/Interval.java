@@ -77,27 +77,33 @@ public class Interval {
     final Interval intersect (Interval a){
 
     }
-    static Interval intersect (Interval a,Interval b){
+    static Interval intersect (Interval a,Interval b) {
         Interval temp = new Interval();
-        if(a.getPocetna() > b.getPocetna()){
+        if (a.getPocetna() > b.getPocetna()) {
             temp.setPocetna(a.getPocetna());
             temp.setPripadaPoc(a.isPripadaPoc());
-        }else if(a.getPocetna() < b.getPocetna()){
+        } else if (a.getPocetna() < b.getPocetna()) {
             temp.setPocetna(b.getPocetna());
             temp.setPripadaPoc(b.isPripadaPoc());
-        }else{
+        } else {
             temp.setPocetna(b.getPocetna());
-            if(a.isPripadaPoc() == false){
+            if (a.isPripadaPoc() == false) {
                 temp.setPripadaPoc(false);
-            }else if(b.isPripadaPoc() == false){
+            } else if (b.isPripadaPoc() == false) {
                 temp.setPripadaPoc(false);
-            }else{
+            } else {
                 temp.setPripadaPoc(true);
             }
         }
-    @Override
-    public String toString(){
-
     }
 
+    @Override
+    public String toString() {
+        return "Interval{" +
+                "pocetna=" + pocetna +
+                ", kraj=" + kraj +
+                ", PripadaPoc=" + PripadaPoc +
+                ", PripadaKraj=" + PripadaKraj +
+                '}';
+    }
 }
