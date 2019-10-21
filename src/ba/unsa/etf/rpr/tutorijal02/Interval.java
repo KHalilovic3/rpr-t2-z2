@@ -47,6 +47,8 @@ public class Interval {
 
     }
     @Override
-    public String toString()
+    public String toString(){
+
+    }
 
 }
